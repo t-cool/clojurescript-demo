@@ -14,11 +14,23 @@
  {8020 "public"}
 
  :builds
- {:app
+ {
+  :app
   {:target :browser
    :output-dir "public/js"
    :asset-path "/js"
 
    :modules
    {:main ; becomes public/js/main.js
-    {:init-fn starter.browser/init}}}}}
+    {:init-fn starter.browser/init}}}
+
+  :app-release
+  {:target :browser
+   :output-dir "js"
+   :asset-path "."
+
+   :modules
+   {:main ; becomes public/js/main.js
+    {:init-fn starter.browser/init}}
+   :optimizations :advanced}}
+}

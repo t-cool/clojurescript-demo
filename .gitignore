@@ -1,4 +1,6 @@
-/public/js
+/public/js/cljs-runtime
+/public/js/manifest.edn
+
 /node_modules
 /target
 /.shadow-cljs
